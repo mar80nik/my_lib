@@ -3,7 +3,7 @@
 UINT StartThreadFunction( LPVOID pParam );
 UINT StopThreadFunction( LPVOID pParam );
 
-#include "globals.h"
+#include "my_lib_globals.h"
 #include "mytime.h"
 #include "MessageInspector.h"
 #include <afxmt.h>

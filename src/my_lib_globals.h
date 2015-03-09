@@ -1,5 +1,7 @@
 #pragma once
 
+#include "MyTime.h"
+
 enum {MSG_ARRAY_TYPE=0xabcdeb,GENERIC_MSG_MSG_TYPE, WINDOW_MSG_TYPE};
 
 #define REGISTER_OK 0
@@ -17,3 +19,12 @@ enum {ERR_MIN=50000, ERR_MAX=59999, WRN_MIN, WRN_MAX=70000};
 enum {ResourceMSG_TYPE=MSG_ARRAY_TYPE+1, ErrorMSG_TYPE, ErrorResMSG_TYPE, WarningResMSG_TYPE, 
 	LOG_MSG_TYPE, START_PARAMS_MSG_TYPE, STOP_PARAMS_MSG_TYPE, ERR_ARR_MSG_TYPE, 
 	PARENT_REPORT_MSG, MYTHREAD_MSG_LAST_TYPE};
+
+struct PerfomanceStaff
+{
+	MyTimer Timer1;
+	bool LogEvents;
+	int pass_num;
+
+	PerfomanceStaff() {LogEvents=false;pass_num=0;}	
+};

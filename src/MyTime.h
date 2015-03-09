@@ -1,14 +1,4 @@
-// MyTime.h: interface for the MyTime class.
-//
-//////////////////////////////////////////////////////////////////////
-
-#if !defined(AFX_MYTIME_H__14DD8CA7_2E45_45E7_8E4E_414F4A3164CD__INCLUDED_)
-#define AFX_MYTIME_H__14DD8CA7_2E45_45E7_8E4E_414F4A3164CD__INCLUDED_
-
-#if _MSC_VER > 1000
 #pragma once
-#endif // _MSC_VER > 1000
-
 
 template<typename T, int _b>
 class MyBaseTimeType
@@ -113,5 +103,3 @@ public:
 	void Start(sec time);
 	void Start(sec time, StopState* stop);
 };
-
-#endif // !defined(AFX_MYTIME_H__14DD8CA7_2E45_45E7_8E4E_414F4A3164CD__INCLUDED_)

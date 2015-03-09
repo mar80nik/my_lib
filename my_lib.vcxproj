@@ -108,6 +108,7 @@
     <ClCompile Include="src\MyTime.cpp" />
     <ClCompile Include="src\my_color.cpp" />
     <ClCompile Include="src\ProtectedObject.cpp" />
+    <ClCompile Include="src\type_array.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
@@ -118,12 +119,13 @@
     <ClInclude Include="Resource.h" />
     <ClInclude Include="src\BMPanvas.h" />
     <ClInclude Include="src\errors.h" />
-    <ClInclude Include="src\globals.h" />
+    <ClInclude Include="src\my_lib_globals.h" />
     <ClInclude Include="src\MessageInspector.h" />
     <ClInclude Include="src\MyThread.h" />
     <ClInclude Include="src\MyTime.h" />
     <ClInclude Include="src\my_color.h" />
     <ClInclude Include="src\ProtectedObject.h" />
+    <ClInclude Include="src\type_array.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>

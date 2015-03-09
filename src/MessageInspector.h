@@ -1,6 +1,6 @@
 #pragma once
 
-#include "globals.h"
+#include "my_lib_globals.h"
 #include <afxtempl.h>
 #include <afxmt.h>
 #include "ProtectedObject.h"
