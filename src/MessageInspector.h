@@ -150,7 +150,7 @@ enum MessagePriorities {lmprLOW = 0, lmprHIGH = 78};
 
 class LogMessage: public MessageForWindow 
 {	
-protected:
+public:
 	static WindowAddress LogWindow;
 public:	
 	enum MessagePriorities {low_pr=0, high_pr=78};

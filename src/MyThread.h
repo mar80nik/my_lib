@@ -151,9 +151,9 @@ private:
 
 	void MyResume();
 	void MySuspend();	
-protected:
+public:
 	static WindowAddress ConfigParentWindow;
-
+protected:
 	StartParams startParam1;
 	CWinThread* Parent;
 	int lastID;		
