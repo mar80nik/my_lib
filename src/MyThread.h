@@ -1,15 +1,10 @@
 #pragma once
 
+#include "my_lib_globals.h"
+#include "MessageInspector.h"
+
 UINT StartThreadFunction( LPVOID pParam );
 UINT StopThreadFunction( LPVOID pParam );
-
-#include "my_lib_globals.h"
-#include "mytime.h"
-#include "MessageInspector.h"
-#include <afxmt.h>
-#include <afxtempl.h>
-#include <cstringt.h>
-#include <afxcoll.h> 
 
 class ResourceMSG: public AbstractMessage
 {

@@ -1,7 +1,6 @@
 #include <stdafx.h>
 #include "ProtectedObject.h"
 
-
 int Guardian::IncreaseReaders() 
 {
 	readers++; 

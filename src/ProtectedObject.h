@@ -1,8 +1,6 @@
 #pragma once
 
-
-#include <afxmt.h>
-#include "mytime.h"
+#include "my_lib_globals.h"
 
 enum AcsessTypes {NONE=0,WRITE, READ,READ_EX};
 

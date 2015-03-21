@@ -1,21 +1,9 @@
-// BMPanvas.h: interface for the BMPanvas class.
-//
-//////////////////////////////////////////////////////////////////////
-
-#if !defined(AFX_BMPANVAS_H__1D024EEE_E5D6_4B1B_A5A4_3AE8B8FABC20__INCLUDED_)
-#define AFX_BMPANVAS_H__1D024EEE_E5D6_4B1B_A5A4_3AE8B8FABC20__INCLUDED_
-
-#if _MSC_VER > 1000
 #pragma once
-#endif // _MSC_VER > 1000
-
-#include <gdiplus.h>
-using namespace Gdiplus;
 
 #include "atlimage.h"
-#include "mytime.h"
-#include "afxmt.h"
 #include "ProtectedObject.h"
+
+using namespace Gdiplus;
 
 #define TOP_LEFT CPoint(0,0)
 
@@ -137,7 +125,3 @@ BITMAPINFOHEADER GetBMPInfo(CString name);
 
 typedef ProtectedObjectX<BMPanvas> ProtectedBMPanvas;
 typedef ProtectorX<BMPanvas> BMPanvasGuard;
-
-
-
-#endif // !defined(AFX_BMPANVAS_H__1D024EEE_E5D6_4B1B_A5A4_3AE8B8FABC20__INCLUDED_)

@@ -1,11 +1,7 @@
 #pragma once
 
 #include "my_lib_globals.h"
-#include <afxtempl.h>
-#include <afxmt.h>
 #include "ProtectedObject.h"
-//#include "GlobalHeader.h"
-
 
 struct WindowAddress
 {

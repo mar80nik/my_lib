@@ -1,8 +1,5 @@
-//---------------------------------------------------------------------------
-#ifndef my_colorH
-#define my_colorH
-#include <math.h>
-#include <WinGDI.h>
+#pragma once
+
 //---------------------------------------------------------------------------
 #define SWAP(a,b,t) { t=a; a=b; b=t; }
 #define BYTE unsigned char
@@ -54,4 +51,3 @@ public:
 	operator COLORREF();
 	operator RGBQUAD();
 };
-#endif

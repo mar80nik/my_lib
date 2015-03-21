@@ -1,5 +1,7 @@
 #pragma once
 
+#include <math.h>
+
 template<typename T, int _b>
 class MyBaseTimeType
 {

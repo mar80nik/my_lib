@@ -1,6 +1,5 @@
-#include <stdafx.h>
+#include "stdafx.h"
 #include "my_color.h"
-
 
 HSLColor::rgbColors HSLColor::Convert()
 {

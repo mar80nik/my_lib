@@ -1,16 +1,6 @@
-// MyThread.cpp : implementation file
-
 #include "stdafx.h"
 #include "MyThread.h"
 #include "my_lib_resources.h"
-#include "MessageInspector.h"
-
-#ifdef _DEBUG
-#define new DEBUG_NEW
-#undef THIS_FILE
-static char THIS_FILE[] = __FILE__;
-#endif
-
 
 /////////////////////////////////////////////////////////////////////////////
 // MyThread

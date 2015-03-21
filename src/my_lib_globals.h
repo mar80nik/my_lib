@@ -1,5 +1,11 @@
 #pragma once
 
+#include <afxmt.h>
+#include <afxtempl.h>
+#include <cstringt.h>
+#include <afxcoll.h> 
+#include <afxmt.h>
+
 #include "MyTime.h"
 
 #define REGISTER_OK 0

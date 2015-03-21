@@ -1,19 +1,5 @@
-// BMPanvas.cpp: implementation of the BMPanvas class.
-//
-//////////////////////////////////////////////////////////////////////
-
 #include "stdafx.h"
 #include "BMPanvas.h"
-
-#ifdef _DEBUG
-#undef THIS_FILE
-static char THIS_FILE[]=__FILE__;
-#define new DEBUG_NEW
-#endif
-
-//////////////////////////////////////////////////////////////////////
-// Construction/Destruction
-//////////////////////////////////////////////////////////////////////
 
 BMPanvas::BMPanvas():
 	w(INFO.bmiHeader.biWidth),h(INFO.bmiHeader.biHeight),wbyte(bitmap.bmWidthBytes), bpp(INFO.bmiHeader.biBitCount)

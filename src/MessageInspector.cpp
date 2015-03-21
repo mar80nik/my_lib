@@ -1,21 +1,6 @@
-// MessageContainers.cpp: implementation of the MessageContainers class.
-//
-//////////////////////////////////////////////////////////////////////
-
-#include <stdafx.h>
+#include "stdafx.h"
 #include "MessageInspector.h"
-#include "MyThread.h"
 
-
-#ifdef _DEBUG
-#undef THIS_FILE
-static char THIS_FILE[]=__FILE__;
-#define new DEBUG_NEW
-#endif
-
-//////////////////////////////////////////////////////////////////////
-// Construction/Destruction
-//////////////////////////////////////////////////////////////////////
 int MessagesInspectorSubject::PIDnum=0;
 
 MessagesInspectorSubject::MessagesInspectorSubject() 
