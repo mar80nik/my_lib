@@ -73,8 +73,15 @@ public:
 	UINT			Msg;
 	WPARAM			wParam;
 
-	MessageForWindow() {Msg=0; wParam=0; ClassID=WINDOW_MSG_TYPE;}
-	MessageForWindow(UINT m, WindowAddress r) {Msg=m; Reciver=r;}
+	MessageForWindow() 
+	{
+		Msg=0; wParam=0; ClassID=WINDOW_MSG_TYPE;
+	}
+	MessageForWindow(UINT m, WindowAddress r) 
+	{ 
+		wParam=0; ClassID=WINDOW_MSG_TYPE;
+		Msg=m; Reciver=r;
+	}
 	virtual ~MessageForWindow() 
 	{
 		int a=5; a++;
