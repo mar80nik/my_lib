@@ -68,6 +68,16 @@ public:
 		}
 		return p;
 	}	
+	BOOL ModifyWith(void (*GainAcsessCB)(T&, void *), void *params = NULL)
+	{
+		ProtectorX<T> *x; BOOL ret = FALSE;
+		if((x=GainAcsess(WRITE))!=NULL)
+		{
+			ProtectorX<T> Protector(x); T& data(Protector);
+			GainAcsessCB(data, params); ret = TRUE;
+		}
+		return ret;
+	}	
     int GetModificationID() {return modifID;}
 	bool Set(T d)
 	{
@@ -89,8 +99,6 @@ public:
 	}
 
 };
-
-
 
 template <typename T>
 class ProtectorX
