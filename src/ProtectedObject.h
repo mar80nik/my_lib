@@ -68,13 +68,14 @@ public:
 		}
 		return p;
 	}	
-	BOOL ModifyWith(void (*GainAcsessCB)(T&, void *), void *params = NULL)
+	template <typename Params>
+	BOOL ModifyWith(Params &params)
 	{
 		ProtectorX<T> *x; BOOL ret = FALSE;
 		if((x=GainAcsess(WRITE))!=NULL)
 		{
 			ProtectorX<T> Protector(x); T& data(Protector);
-			GainAcsessCB(data, params); ret = TRUE;
+			params.GainAcsessCB(data); ret = TRUE;
 		}
 		return ret;
 	}	

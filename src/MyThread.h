@@ -202,17 +202,24 @@ protected:
 
 
 template<typename T>
-class WorkThread: public MyThread
+class WorkThread: public T, public MyThread
 {
 public:
-	T params;
 	WorkThread(int id)
 	{
-		MyThread::Create(AfxGetApp(),id,NULL);
+		MyThread::Create(AfxGetApp(),id,NULL); 
 	};
 	~WorkThread(){};
 
-	static UINT proc(void* param);
+	static UINT proc(void* param)
+	{
+		if (param != NULL)
+		{
+			WorkThread<T> *t = (WorkThread<T> *)param;
+			return t->workthread_main();
+		}
+		return 0;
+	}
 	virtual HRESULT Start()
 	{
 		CWinThread *ret;
