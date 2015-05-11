@@ -13,6 +13,7 @@ public:
 		return *this;
 	}
 	operator type*() {return CArray<type>::GetData();}
+	operator const type*() const {return CArray<type>::GetData();}
 	BOOL operator==(const TypeArray &ref)
 	{
 		if (GetSize() != ref.GetSize()) return FALSE;

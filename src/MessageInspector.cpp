@@ -91,9 +91,6 @@ void MessageForWindow::Dispatch()
 
 void MessageForWindow::DispatchMsg( void *t )
 {
-	ASSERT(Msg);
-	ASSERT(Reciver.pThrd);
-	ASSERT(Reciver.pWND);
 	CWinThread *thrd=AfxGetThread();
 	if(thrd==Reciver.pThrd)
 	{

@@ -171,34 +171,42 @@ public:
 	BOOL HasMessages() {return (GetSize() != 0);}
 };
 
-class ControledLogMessage
+template <typename MsgClass>
+class ControledMessage
 {
 protected:
-	LogMessage* msg; 
+	MsgClass* msg; 
+public:
+	ControledMessage()	
+	{
+		msg = NULL;	msg = new MsgClass();
+	}
+	virtual ~ControledMessage()	{if (msg != NULL) delete msg;}	
+	virtual void Dispatch()	
+	{
+		msg->Dispatch(); msg = NULL;
+	}
+	ControledMessage& operator << (const MsgClass &Message) 
+	{ 
+		*msg = Message; 
+		return (*this); 
+	}
+};
+
+class ControledLogMessage: public ControledMessage<LogMessage>
+{
 public:
 	CString T;
 
-	ControledLogMessage(::MessagePriorities prio = ::lmprLOW)	
-	{msg = NULL;	msg = new LogMessage(prio);}
-	~ControledLogMessage()	
-	{if (msg != NULL) delete msg;}	
+	ControledLogMessage(::MessagePriorities prio = ::lmprLOW): ControledMessage<LogMessage>() { SetPriority(prio); }
+	virtual ~ControledLogMessage()	{}	
 	virtual void Dispatch()	
 	{
-		if (msg->HasMessages())
-		{
-			msg->Dispatch(); msg = NULL;
-		}
-		else
-		{
-			delete msg; msg = NULL;
-		}
+		if (msg->HasMessages()) 
+			ControledMessage<LogMessage>::Dispatch();
 	}
-	LogMessage& operator <<(const CString &Message)
-	{return (*msg) << Message;}
-	void SetPriority(const ::MessagePriorities &pr) 
-	{msg->SetPriority(pr);}
-	int GetSize() const
-	{msg->GetSize();}
-	BOOL HasMessages() const
-	{msg->HasMessages();}
+	LogMessage& operator <<(const CString &Message) { return (*msg) << Message; }
+	BOOL HasMessages() const { msg->HasMessages(); }
+	void SetPriority(const ::MessagePriorities &pr) {msg->SetPriority(pr);}
+	virtual int GetSize() const	{ return msg->GetSize(); }
 };
