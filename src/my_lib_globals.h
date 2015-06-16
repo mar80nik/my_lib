@@ -8,6 +8,9 @@
 
 #include "MyTime.h"
 
+#define IS ==
+#define IS_NOT !=
+
 #define REGISTER_OK 0
 #define REGISTER_ERROR -1;
 #define REGISTER_ERROR_THREAD_TERMINATE -2
